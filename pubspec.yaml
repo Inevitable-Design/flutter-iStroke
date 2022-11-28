@@ -1,0 +1,58 @@
+name: prob_stats_project
+description: Stroke Predicition App
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  provider: ^6.0.4
+  http: ^0.13.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/vector.png
+    - assets/fonts/
+    - assets/fonts/San Francisco/SFUIDisplay-Ultralight.otf
+    - assets/fonts/San Francisco/SFUIDisplay-Thin.otf
+    - assets/fonts/San Francisco/SFUIDisplay-Semibold.otf
+    - assets/fonts/San Francisco/SFUIDisplay-Regular.otf
+    - assets/fonts/San Francisco/SFUIDisplay-Medium.otf
+    - assets/fonts/San Francisco/SFUIDisplay-Light.ttf
+    - assets/fonts/San Francisco/SFUIDisplay-Heavy.otf
+    - assets/fonts/San Francisco/SFUIDisplay-Bold.ttf
+    - assets/fonts/San Francisco/SFUIDisplay-Black.otf
+
+  fonts:
+    - family: San Francisco
+      fonts:
+        - asset: assets/fonts/San Francisco/SFUIDisplay-Thin.otf
+          weight: 100
+        - asset: assets/fonts/San Francisco/SFUIDisplay-Ultralight.otf
+          weight: 200
+        - asset: assets/fonts/San Francisco/SFUIDisplay-Light.ttf
+          weight: 300
+        - asset: assets/fonts/San Francisco/SFUIDisplay-Regular.otf
+          weight: 400
+        - asset: assets/fonts/San Francisco/SFUIDisplay-Medium.otf
+          weight: 500
+        - asset: assets/fonts/San Francisco/SFUIDisplay-Semibold.otf
+          weight: 600
+        - asset: assets/fonts/San Francisco/SFUIDisplay-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/San Francisco/SFUIDisplay-Black.otf
+          weight: 800
+        - asset: assets/fonts/San Francisco/SFUIDisplay-Heavy.otf
+          weight: 900
