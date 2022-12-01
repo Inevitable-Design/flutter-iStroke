@@ -6,10 +6,10 @@ import 'package:prob_stats_project/providers/user_vitals_provider.dart';
 
 Widget SmokingPicker() {
   final items = [
-    'formerly smoked',
-    'never smoked',
-    'smokes',
-    'unknown',
+    'Formerly Smoked',
+    'Never Smokes',
+    'Smokes',
+    // 'unknown',
   ];
 
   return SizedBox(
@@ -23,31 +23,32 @@ Widget SmokingPicker() {
         children: [
           Center(
             child: Text(
-              'formerly smoked',
+              'Formerly Smoked',
               style: kTextStyle_w400.copyWith(fontSize: 25.0),
             ),
           ),
           Center(
             child: Text(
-              'never smoked',
+              'Never Smokes',
               style: kTextStyle_w400.copyWith(fontSize: 25.0),
             ),
           ),
           Center(
             child: Text(
-              'smokes',
+              'Smokes',
               style: kTextStyle_w400.copyWith(fontSize: 25.0),
             ),
           ),
-          Center(
-            child: Text(
-              'unknown',
-              style: kTextStyle_w400.copyWith(fontSize: 25.0),
-            ),
-          ),
+          // Center(
+          //   child: Text(
+          //     'unknown',
+          //     style: kTextStyle_w400.copyWith(fontSize: 25.0),
+          //   ),
+          // ),
         ],
         onSelectedItemChanged: (index) {
-          Provider.of<UserVitalsProvider>(context, listen: false).setSmokingStatus(items[index]);
+          Provider.of<UserVitalsProvider>(context, listen: false)
+              .setSmokingStatus(items[index]);
         },
       ),
     ),

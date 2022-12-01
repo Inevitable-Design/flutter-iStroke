@@ -39,9 +39,7 @@ class VitalsScreen extends StatelessWidget {
                   style: kTextStyle_w900.copyWith(fontSize: 30.0),
                 ),
                 const CircleAvatar(
-                  backgroundImage: AssetImage(
-                      'assets/images/vector.png'
-                  ),
+                  backgroundImage: AssetImage('assets/images/vector.png'),
                   backgroundColor: Colors.lightBlue,
                   radius: 18.0,
                 ),
@@ -90,7 +88,7 @@ class VitalsScreen extends StatelessWidget {
                     height: 1.0,
                   ),
                   EnterVitalsRow(
-                    title: 'Heart Disease',
+                    title: 'Heart Disease History',
                     action: HeartDiseasePicker(),
                     status: Provider.of<UserVitalsProvider>(context)
                         .getHeartDisease

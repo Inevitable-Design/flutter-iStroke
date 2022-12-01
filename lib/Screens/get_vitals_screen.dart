@@ -31,7 +31,7 @@ class GetVitalsScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              const SizedBox(height: 100),
+              const SizedBox(height: 60),
               RichText(
                 text: TextSpan(
                   text: "Please enter\n",
@@ -58,7 +58,8 @@ class GetVitalsScreen extends StatelessWidget {
                     EnterVitalsRow(
                       title: 'Gender',
                       action: GenderPicker(),
-                      status: Provider.of<UserVitalsProvider>(context).getGender,
+                      status:
+                          Provider.of<UserVitalsProvider>(context).getGender,
                     ),
                     const Divider(
                       color: Color(0xFFd2d3d5),
@@ -87,7 +88,7 @@ class GetVitalsScreen extends StatelessWidget {
                       height: 1.0,
                     ),
                     EnterVitalsRow(
-                      title: 'Heart Disease',
+                      title: 'Heart Disease History',
                       action: HeartDiseasePicker(),
                       status: Provider.of<UserVitalsProvider>(context)
                           .getHeartDisease
@@ -120,7 +121,7 @@ class GetVitalsScreen extends StatelessWidget {
                       height: 1.0,
                     ),
                     EnterVitalsRow(
-                      title: 'Residence',
+                      title: 'Residence Type',
                       action: ResidencePicker(),
                       status: Provider.of<UserVitalsProvider>(context)
                           .getResidenceType
@@ -134,7 +135,8 @@ class GetVitalsScreen extends StatelessWidget {
                       title: 'Average Glucose Level',
                       action: GlucoseLevelPicker(),
                       status: Provider.of<UserVitalsProvider>(context)
-                          .getAvgGlucoseLevel.toStringAsFixed(2),
+                          .getAvgGlucoseLevel
+                          .toStringAsFixed(2),
                     ),
                     const Divider(
                       color: Color(0xFFd2d3d5),
@@ -185,7 +187,8 @@ class GetVitalsScreen extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.pushNamedAndRemoveUntil(context, MainScreen.id, (route) => false);
+                        Navigator.pushNamedAndRemoveUntil(
+                            context, MainScreen.id, (route) => false);
                       },
                     ),
                   ),

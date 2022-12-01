@@ -6,10 +6,10 @@ import 'package:prob_stats_project/providers/user_vitals_provider.dart';
 
 Widget WorkTypePicker() {
   final items = [
-    'Children',
-    'Govt_jov',
-    'Never_worked',
-    'Private',
+    // 'Student',
+    'Public Sector',
+    // 'Never_worked',
+    'Private Sector',
     'Self-Employed',
   ];
 
@@ -22,27 +22,27 @@ Widget WorkTypePicker() {
           background: Colors.pink.withOpacity(0.2),
         ),
         children: [
+          // Center(
+          //   child: Text(
+          //     'Student',
+          //     style: kTextStyle_w400.copyWith(fontSize: 25.0),
+          //   ),
+          // ),
           Center(
             child: Text(
-              'Children',
+              'Public Sector',
               style: kTextStyle_w400.copyWith(fontSize: 25.0),
             ),
           ),
+          // Center(
+          //   child: Text(
+          //     'Never_worked',
+          //     style: kTextStyle_w400.copyWith(fontSize: 25.0),
+          //   ),
+          // ),
           Center(
             child: Text(
-              'Govt_jov',
-              style: kTextStyle_w400.copyWith(fontSize: 25.0),
-            ),
-          ),
-          Center(
-            child: Text(
-              'Never_worked',
-              style: kTextStyle_w400.copyWith(fontSize: 25.0),
-            ),
-          ),
-          Center(
-            child: Text(
-              'Private',
+              'Private Sector',
               style: kTextStyle_w400.copyWith(fontSize: 25.0),
             ),
           ),
@@ -54,7 +54,8 @@ Widget WorkTypePicker() {
           ),
         ],
         onSelectedItemChanged: (index) {
-          Provider.of<UserVitalsProvider>(context, listen: false).setWorkType(items[index]);
+          Provider.of<UserVitalsProvider>(context, listen: false)
+              .setWorkType(items[index]);
         },
       ),
     ),

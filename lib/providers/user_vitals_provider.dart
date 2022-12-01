@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class UserVitalsProvider extends ChangeNotifier {
   String gender = '';
   int age = 0;
-  int hypertension = 0;
-  int heart_disease = 0;
+  String hypertension = '';
+  String heart_disease = '';
   String ever_married = '';
   String work_type = '';
   String residence_type = '';
@@ -35,12 +35,12 @@ class UserVitalsProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void setHypertension(int _hypertension) {
+  void setHypertension(String _hypertension) {
     hypertension = _hypertension;
     notifyListeners();
   }
 
-  void setHeartDisease(int _heart_disease) {
+  void setHeartDisease(String _heart_disease) {
     heart_disease = _heart_disease;
     notifyListeners();
   }
@@ -88,11 +88,11 @@ class UserVitalsProvider extends ChangeNotifier {
     return age;
   }
 
-  int get getHypertension {
+  String get getHypertension {
     return hypertension;
   }
 
-  int get getHeartDisease {
+  String get getHeartDisease {
     return heart_disease;
   }
 
@@ -127,8 +127,8 @@ class UserVitalsProvider extends ChangeNotifier {
   void clear() {
     gender = '';
     age = 0;
-    hypertension = 0;
-    heart_disease = 0;
+    hypertension = '';
+    heart_disease = '';
     ever_married = '';
     work_type = '';
     residence_type = '';

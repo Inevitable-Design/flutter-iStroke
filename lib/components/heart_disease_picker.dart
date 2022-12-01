@@ -5,7 +5,10 @@ import 'package:provider/provider.dart';
 import 'package:prob_stats_project/providers/user_vitals_provider.dart';
 
 Widget HeartDiseasePicker() {
-  int intdex = 0;
+  final items = [
+    'No',
+    'Yes',
+  ];
 
   return SizedBox(
     height: 350.0,
@@ -18,22 +21,20 @@ Widget HeartDiseasePicker() {
         children: [
           Center(
             child: Text(
-              '0',
+              'No',
               style: kTextStyle_w400.copyWith(fontSize: 25.0),
             ),
           ),
           Center(
             child: Text(
-              '1',
+              'Yes',
               style: kTextStyle_w400.copyWith(fontSize: 25.0),
             ),
           ),
         ],
         onSelectedItemChanged: (index) {
-          setState() {
-            intdex = index;
-          }
-          Provider.of<UserVitalsProvider>(context, listen: false).setHeartDisease(index);
+          Provider.of<UserVitalsProvider>(context, listen: false)
+              .setHeartDisease(items[index]);
         },
       ),
     ),

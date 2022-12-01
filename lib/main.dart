@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       create: (context) => UserVitalsProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'iStroke',
         theme: ThemeData(
           primarySwatch: Colors.pink,
         ),

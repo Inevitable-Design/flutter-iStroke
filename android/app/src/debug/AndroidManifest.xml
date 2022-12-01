@@ -6,3 +6,11 @@
     -->
     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
+
+
+    <!-- package="com.probab.iStroke">
+   <application
+        android:label="iStroke"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <activity -->

@@ -29,7 +29,7 @@ class _StrokeChanceCardState extends State<StrokeChanceCard> {
     print(decodedData["Probability"]);
     setState(() {
       widget.percentage = decodedData["Probability"];
-      widget.intensity = int.parse(decodedData["Intensity"]);
+      widget.intensity = (decodedData["Intensity"]);
     });
     return decodedData["Probability"];
   }
@@ -112,18 +112,23 @@ class _StrokeChanceCardState extends State<StrokeChanceCard> {
                   ),
                   onPressed: () {
                     String url =
-                        'http://10.12.34.140:5050/api/v1/?gender=${Provider.of<UserVitalsProvider>(context, listen: false).getGender}&age=${Provider.of<UserVitalsProvider>(context, listen: false).getAge}.0&hypertension=${Provider.of<UserVitalsProvider>(context, listen: false).getHypertension}&heart_disease=${Provider.of<UserVitalsProvider>(context, listen: false).getHeartDisease}&married=${Provider.of<UserVitalsProvider>(context, listen: false).getEverMarried}&work_type=${Provider.of<UserVitalsProvider>(context, listen: false).getWorkType}&residence_type=${Provider.of<UserVitalsProvider>(context, listen: false).getResidenceType}&avg_glucose_level=${Provider.of<UserVitalsProvider>(context, listen: false).getAvgGlucoseLevel}&bmi=${Provider.of<UserVitalsProvider>(context, listen: false).getBMI}&smoking_status=${Provider.of<UserVitalsProvider>(context, listen: false).getSmokingStatus}';
+                        'https://flask-production-b3ef.up.railway.app/api/v1/?gender=${Provider.of<UserVitalsProvider>(context, listen: false).getGender}&age=${Provider.of<UserVitalsProvider>(context, listen: false).getAge}.0&hypertension=${Provider.of<UserVitalsProvider>(context, listen: false).getHypertension}&heart_disease=${Provider.of<UserVitalsProvider>(context, listen: false).getHeartDisease}&married=${Provider.of<UserVitalsProvider>(context, listen: false).getEverMarried}&work_type=${Provider.of<UserVitalsProvider>(context, listen: false).getWorkType}&residence_type=${Provider.of<UserVitalsProvider>(context, listen: false).getResidenceType}&avg_glucose_level=${Provider.of<UserVitalsProvider>(context, listen: false).getAvgGlucoseLevel}&bmi=${Provider.of<UserVitalsProvider>(context, listen: false).getBMI}&smoking_status=${Provider.of<UserVitalsProvider>(context, listen: false).getSmokingStatus}';
                     makeRequest(url);
                     print(widget.intensity);
-                    if (widget.intensity ==  1) {
+                    // widget.intensity = 2;
+                    // int is = 0;
+                    if (widget.intensity == 1) {
                       widget.level = "Low";
-                      widget.message = "Everything looks fine. Medical checkups can offer additional insights.";
+                      widget.message =
+                          "Everything looks fine. Medical checkups can offer additional insights.";
                     } else if (widget.intensity == 2) {
                       widget.level = "Medium";
-                      widget.message = "Your risk level is moderate. Frequent Medical checkups are suggested.";
+                      widget.message =
+                          "Your risk level is moderate. Frequent Medical checkups are suggested.";
                     } else if (widget.intensity == 3) {
                       widget.level = "High";
-                      widget.message = "Your risk level is significantly high. We suggest you to consult a medical professional";
+                      widget.message =
+                          "Your risk level is significantly high. We suggest you to consult a medical professional";
                     }
                   },
                 ),
